@@ -1,0 +1,24 @@
+name=pyproject.toml
+[project]
+name = "data-science-tests"
+version = "0.1.0"
+description = "Starter repo dla nauki testów i narzędzi Python dla data science"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+
+[tool.isort]
+profile = "black"
+
+[tool.ruff]
+line-length = 88
+# Do podstawowych kontroli stylu i błędów
+select = ["E", "F", "W", "C90"]
+
+[tool.mypy]
+python_version = "3.11"
+warn_unused_configs = true
+ignore_missing_imports = true
