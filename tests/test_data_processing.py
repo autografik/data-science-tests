@@ -1,4 +1,4 @@
-name=tests/test_data_processing.py
+# tests / test_data_processing.py
 """
 Testy modułu data_processing.py.
 
@@ -24,7 +24,9 @@ def test_clean_column_names():
     assert "a" not in [c for c in cleaned.columns if " " in c]
     assert "a" not in list(filter(lambda x: " " in x, cleaned.columns))
     # konkretne oczekiwane nazwy:
-    assert "a" in [col.replace("_", "") for col in cleaned.columns] or "a" in [c[0] for c in zip(*[cleaned.columns])]
+    assert "a" in [col.replace("_", "") for col in cleaned.columns] or "a" in [
+        c[0] for c in zip(*[cleaned.columns])
+    ]
     # Prostsze sprawdzenie — nazwy powinny być lower() i bez spacji:
     for col in cleaned.columns:
         assert col == col.strip()
@@ -48,7 +50,9 @@ def test_select_numeric_columns_and_means():
     means = dp.compute_column_means(df, ["num", "float_col"])
     # Porównujemy wartości z obliczonymi bezpośrednio
     assert pytest.approx(means["num"], rel=1e-9) == float(df["num"].mean(skipna=True))
-    assert pytest.approx(means["float_col"], rel=1e-9) == float(df["float_col"].mean(skipna=True))
+    assert pytest.approx(means["float_col"], rel=1e-9) == float(
+        df["float_col"].mean(skipna=True)
+    )
 
 
 def test_compute_column_means_missing_column():

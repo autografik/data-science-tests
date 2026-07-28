@@ -1,4 +1,4 @@
-name=src/ds_tests/data_processing.py
+name = src / ds_tests / data_processing.py
 """
 Prosty moduł z funkcjami pomocniczymi do pracy z danymi.
 Kod jest napisany tak, by dało się go łatwo testować — funkcje przyjmują DataFrame

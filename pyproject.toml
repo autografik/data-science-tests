@@ -1,4 +1,4 @@
-name=pyproject.toml
+
 [project]
 name = "data-science-tests"
 version = "0.1.0"

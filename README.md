@@ -1,4 +1,4 @@
-name=README.md
+
 # data-science-tests
 
 Starter repo do nauki narzędzi, testów i workflow dla projektów data-science.
@@ -34,7 +34,3 @@ Jak testować poprawnie:
 - Używaj małych, czytelnych przykładów danych w testach.
 - W razie potrzeby użyj fixture’ów pytest do budowy wspólnych danych testowych.
 - Do testów integracyjnych (np. czytanie z plików) stwórz katalog `tests/data/` i referencje do małych próbek — unikaj dużych danych.
-
-Jeśli chcesz, mogę:
-- Po utworzeniu repo na GitHubie (autografik/data-science-tests) wypchać te pliki automatycznie.
-- Dodać przykładowy workflow release lub deployment.
